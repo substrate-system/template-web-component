@@ -28,6 +28,7 @@ export class Example extends HTMLElement {
 
     /**
      * Handle [example] attribute changes
+     * @see {@link https://gomakethings.com/how-to-detect-when-attributes-change-on-a-web-component/#organizing-your-code Go Make Things article}
      *
      * @param  {string} oldValue The old attribute value
      * @param  {string} newValue The new attribute value
