@@ -9,8 +9,16 @@ declare global {
 }
 
 export class Example extends HTMLElement {
+    // Define the attributes to observe
+    // need this for `attributeChangedCallback`
+    static observedAttributes = ['example']
+
+    example:string|null
+
     constructor () {
         super()
+        const example = this.getAttribute('example')
+        this.example = example
 
         this.innerHTML = `<div>
             <p>example</p>
@@ -22,12 +30,8 @@ export class Example extends HTMLElement {
         </div>`
     }
 
-    // Define the attributes to observe
-    // need this for `attributeChangedCallback`
-    static observedAttributes = ['exmaple']
-
     /**
-     * Handle [example] attribute changes
+     * Handle 'example' attribute changes
      * @see {@link https://gomakethings.com/how-to-detect-when-attributes-change-on-a-web-component/#organizing-your-code Go Make Things article}
      *
      * @param  {string} oldValue The old attribute value
@@ -44,7 +48,8 @@ export class Example extends HTMLElement {
     }
 
     /**
-     * Runs when the value of an attribute is changed on the component
+     * Runs when the value of an attribute is changed
+     *
      * @param  {string} name     The attribute name
      * @param  {string} oldValue The old attribute value
      * @param  {string} newValue The new attribute value
