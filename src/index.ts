@@ -58,6 +58,7 @@ export class Example extends HTMLElement {
         debug('an attribute changed', name)
         const handler = this[`handleChange_${name}`];
         (handler && handler(oldValue, newValue))
+        this.render()
     }
 
     disconnectedCallback () {
@@ -76,6 +77,19 @@ export class Example extends HTMLElement {
         })
 
         observer.observe(this, { childList: true })
+
+        this.render()
+    }
+
+    render () {
+        this.innerHTML = `<div>
+            <p>example</p>
+            <ul>
+                ${Array.from(this.children).filter(Boolean).map(node => {
+                    return `<li>${node.outerHTML}</li>`
+                }).join('')}
+            </ul>
+        </div>`
     }
 }
 
