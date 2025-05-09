@@ -49,7 +49,7 @@
   "dependencies": {},
   "devDependencies": {
     "@bicycle-codes/dom": "^0.1.2",
-    "@substrate-system/debug": "^0.7.18",
+    "@substrate-system/debug": "^0.9.0",
     "@substrate-system/tapzero": "^0.10.13",
     "@typescript-eslint/eslint-plugin": "^8.7.0",
     "@typescript-eslint/parser": "^8.7.0",
