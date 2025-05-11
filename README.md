@@ -30,10 +30,6 @@ __The templates take several variables__
 3. Delete either `.github/workflows/gh-pages-docs.yml` or `.github/workflows/gh-pages.yml`, depending on whether you want to deploy an example or docs to github pages.
 
 4. __Edit things__
-    * Use `./README.example.md` as a starter for docs:
-    ```sh
-    mv ./README.example.md ./README.md
-    ```
     * edit the [build-example](https://github.com/nichoth/template-web-component/blob/c580636f1c912fe2633f7c2478f28b11729c9b80/package.json#L20) command in `package.json` so that it has the right
     path for github pages
 
