@@ -1,5 +1,5 @@
-import { test } from '@bicycle-codes/tapzero'
-import { waitFor } from '@bicycle-codes/dom'
+import { test } from '@substrate-system/tapzero'
+import { waitFor } from '@substrate-system/dom'
 import '../src/index.js'
 
 test('example test', async t => {
