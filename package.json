@@ -71,7 +71,7 @@
     "typedoc": "^0.28.1",
     "typescript": "^5.7.3",
     "vite": "^6.3.5",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
   },
   "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)",
   "license": "MIT"
