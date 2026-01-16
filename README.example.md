@@ -14,7 +14,9 @@
 
 [See a live demo](https://{{gh-namespace}}.github.io/{{repo-name}}/)
 
+<details><summary><h2>Contents</h2></summary>
 <!-- toc -->
+</details>
 
 ## install
 
