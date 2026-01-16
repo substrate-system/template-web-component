@@ -42,7 +42,6 @@
       "require": "./dist/*.cjs"
     }
   },
-  "dependencies": {},
   "devDependencies": {
     "@substrate-system/debug": "^0.9.32",
     "@substrate-system/dom": "^0.1.13",
@@ -58,6 +57,7 @@
     "globby": "^16.1.0",
     "handlebars": "^4.7.8",
     "lightningcss": "^1.30.2",
+    "lightningcss-cli": "^1.30.2",
     "markdown-toc": "^1.2.0",
     "stylelint": "^16.19.1",
     "stylelint-config-standard": "^39.0.1",
