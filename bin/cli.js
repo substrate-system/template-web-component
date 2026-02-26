@@ -51,6 +51,7 @@ delete parsed.scripts["build-cli"];
 delete parsed.devDependencies.globby;
 delete parsed.devDependencies.handlebars;
 delete parsed.devDependencies.yargs;
+delete parsed.devDependencies["@inquirer/prompts"];
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2));
 const readmePath = path.resolve(__dirname, "..", "README.example.md");
 const readmeTmpl = Handlebars.compile("" + await fs.readFile(readmePath));

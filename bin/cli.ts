@@ -62,6 +62,7 @@ const parsed:{
     scripts: { 'build-cli'?:string },
     devDependencies: Partial<{
         globby:string;
+        '@inquirer/prompts':string;
         handlebars:string;
         yargs:string
     }>
@@ -70,6 +71,7 @@ delete parsed.scripts['build-cli']
 delete parsed.devDependencies.globby
 delete parsed.devDependencies.handlebars
 delete parsed.devDependencies.yargs
+delete parsed.devDependencies['@inquirer/prompts']
 
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
 
