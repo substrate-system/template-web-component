@@ -1,6 +1,6 @@
 import { define } from '@substrate-system/web-component/util'
-import { createDebug } from '@substrate-system/debug'
-const debug = createDebug('{{component-name}}')
+import Debug from '@substrate-system/debug'
+const debug = Debug('{{component-name}}')
 
 // for docuement.querySelector
 declare global {
