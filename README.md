@@ -8,6 +8,7 @@ A template for vanilla web components.
 * [How to detect when attributes change on a Web Component](https://gomakethings.com/how-to-detect-when-attributes-change-on-a-web-component/)
 
 ## use
+
 1. Use the template button in github. Or clone this then
 `rm -rf .git && git init`. Then `npm i && npm init`.
 

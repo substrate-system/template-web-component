@@ -78,6 +78,7 @@ import '{{package-name}}'
 ```
 
 ### pre-built
+
 This package exposes minified JS and CSS files too. Copy them to a location that is
 accessible to your web server, then link to them in HTML.
 
