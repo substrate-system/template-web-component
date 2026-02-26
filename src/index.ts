@@ -1,3 +1,4 @@
+import { define } from '@substrate-system/web-component/util'
 import { createDebug } from '@substrate-system/debug'
 const debug = createDebug('{{component-name}}')
 
@@ -93,6 +94,4 @@ export class Example extends HTMLElement {
     }
 }
 
-if ('customElements' in window) {
-    customElements.define('{{component-name}}', Example)
-}
+define('{{component-name}}', Example)

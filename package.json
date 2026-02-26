@@ -69,5 +69,8 @@
     "yargs": "^18.0.0"
   },
   "author": "nichoth <nichoth@nichoth.com> (https://nichoth.com)",
-  "license": "SEE LICENSE IN LICENSE"
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "@substrate-system/web-component": "^0.0.46"
+  }
 }
