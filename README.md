@@ -14,17 +14,17 @@ A template for vanilla web components.
 
 * Use the template system to re-name this module and start the docs:
 ```sh
-node ./bin/cli.js --package-name=@nichoth/example --component-name=my-component --gh-namespace nichoth --repo-name my-repo-name
+node ./bin/cli.js
 ```
 
-__The templates take several variables__
+__The CLI prompts for several variables__
 
-* `--gh-namespace` -- first path segment on github
-* `--package-name` -- package name, including any namespace.
+* `gh-namespace` -- first path segment on github
+* `package-name` -- package name, including any namespace.
   eg, `@alice/package`
-* `--component-name` -- the name of the web component, as used in HTML,
+* `component-name` -- the name of the web component, as used in HTML,
   eg `cool-example`
-* `--repo-name` -- repository name, the last segment in github URL,
+* `repo-name` -- repository name, the last segment in github URL,
   eg, `github.com/user/repo-name-here`
 
 
@@ -78,4 +78,3 @@ See
 
 
 ### [disconnectedCallback](https://gomakethings.com/the-web-component-lifecycle-methods/#the-connectedcallback-and-disconnectedcallback-methods)
-

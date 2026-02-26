@@ -3,26 +3,24 @@ import fs from 'fs/promises'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { globby } from 'globby'
-import yargs from 'yargs'
-import { hideBin } from 'yargs/helpers'
+import { input } from '@inquirer/prompts'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
-const argv = yargs(hideBin(process.argv))
-    .scriptName('templater')
-    .usage('$0 --package-name=@namespace/name --component-name=my-webcomponent')
-    .help()
-    .argv
+const askRequired = async (message:string) => {
+    const value = await input({
+        message,
+        validate: val => val.trim() ? true : 'This value is required.'
+    })
 
-const { _, ...templateParams } = argv
+    return value.trim()
+}
 
-if (
-    !templateParams['package-name'] ||
-    !templateParams['component-name'] ||
-    !templateParams['gh-namespace'] ||
-    !templateParams['repo-name']
-) {
-    throw new Error('Missing required params.')
+const templateParams = {
+    'package-name': await askRequired('Package name (example: @namespace/name)'),
+    'component-name': await askRequired('Component name (example: cool-component)'),
+    'gh-namespace': await askRequired('GitHub namespace/user (example: alice)'),
+    'repo-name': await askRequired('Repository name (example: cool-component)')
 }
 
 // example files
@@ -64,6 +62,7 @@ const parsed:{
     scripts: { 'build-cli'?:string },
     devDependencies: Partial<{
         globby:string;
+        '@inquirer/prompts':string;
         handlebars:string;
         yargs:string
     }>
@@ -72,6 +71,7 @@ delete parsed.scripts['build-cli']
 delete parsed.devDependencies.globby
 delete parsed.devDependencies.handlebars
 delete parsed.devDependencies.yargs
+delete parsed.devDependencies['@inquirer/prompts']
 
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
 
