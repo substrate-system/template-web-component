@@ -1,5 +1,5 @@
 import { createDebug } from '@substrate-system/debug'
-const debug = createDebug()
+const debug = createDebug('{{component-name}}')
 
 // for docuement.querySelector
 declare global {
